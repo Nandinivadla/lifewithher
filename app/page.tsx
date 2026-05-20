@@ -34,7 +34,7 @@ export default function WeddingPage() {
 
     const introTimer = setTimeout(() => {
       setShowIntro(false);
-    }, 4000);
+    }, 3500);
 
     return () => {
       clearInterval(timer);
@@ -87,7 +87,7 @@ export default function WeddingPage() {
 
       <div className="absolute w-[450px] h-[450px] bg-[#a8b58a]/30 blur-[140px] rounded-full bottom-0 right-0" />
 
-      {/* FLOATING FLOWERS + HEARTS */}
+      {/* FLOWERS + HEARTS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
         {[...Array(20)].map((_, i) => (
@@ -149,7 +149,7 @@ export default function WeddingPage() {
           </p>
         </div>
 
-        {/* MAP BUTTON */}
+        {/* ROUTE BUTTON */}
         <a
           href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
           target="_blank"
