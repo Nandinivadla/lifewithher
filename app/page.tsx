@@ -198,6 +198,21 @@ export default function WeddingPage() {
         <h1 className="text-6xl md:text-8xl font-serif text-[#f5d6df] leading-tight">
           Nandu <span className="text-[#b8c7a1]">&</span> Auriane
         </h1>
+        <div className="relative mt-16 group">
+
+  <div className="absolute inset-0 bg-[#b8c7a1]/20 blur-3xl rounded-[50px]"></div>
+
+  <div className="relative mt-16 group">
+
+  <div className="absolute inset-0 bg-[#b8c7a1]/20 blur-3xl rounded-[50px]"></div>
+
+  <img
+    src="/together.jpeg"
+    alt="Nandu and Auriane"
+    className="relative w-[320px] md:w-[430px] rounded-[40px] border border-white/10 shadow-2xl object-cover transition duration-700 group-hover:scale-105"
+  />
+
+</div>
 
         <div className="w-40 h-[2px] bg-[#b8c7a1] my-8 rounded-full"></div>
 
@@ -412,23 +427,4 @@ export default function WeddingPage() {
       </footer>
     </main>
   );
-}
-html {
-  scroll-behavior: smooth;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1.5s ease forwards;
 }
