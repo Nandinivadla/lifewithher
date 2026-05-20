@@ -278,7 +278,7 @@ export default function WeddingPage() {
           </h2>
 
           <form
-            action="https://formspree.io/f/mpqnpwyd"
+            action="https://formspree.io/f/xbdbglqp"
             method="POST"
             className="space-y-6"
           >
