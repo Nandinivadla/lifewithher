@@ -53,7 +53,7 @@ export default function WeddingPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#142018] text-white overflow-hidden relative">
+    <main className="min-h-screen bg-[#0d1410] text-white overflow-hidden relative">
 
       {/* FILM GRAIN */}
       <div className="fixed inset-0 opacity-[0.05] pointer-events-none z-50 mix-blend-soft-light bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]"></div>
@@ -64,11 +64,11 @@ export default function WeddingPage() {
       </audio>
 
       {/* FOREST GLOWS */}
-      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#7fa16d]/25 blur-[180px] rounded-full"></div>
+      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#6f8f5f]/25 blur-[180px] rounded-full"></div>
 
-      <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-[#5a2434]/30 blur-[180px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-[#2a0f18]/40 blur-[180px] rounded-full"></div>
 
-      <div className="absolute top-[40%] left-[30%] w-[500px] h-[500px] bg-[#6d8a5d]/15 blur-[160px] rounded-full"></div>
+      <div className="absolute top-[40%] left-[30%] w-[500px] h-[500px] bg-[#6f8f5f]/15 blur-[160px] rounded-full"></div>
 
       {/* STARS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -111,7 +111,7 @@ export default function WeddingPage() {
         {[...Array(45)].map((_, i) => (
           <div
             key={i}
-            className="absolute text-[#7fa16d] animate-bounce"
+            className="absolute text-[#6f8f5f] animate-bounce"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -126,8 +126,8 @@ export default function WeddingPage() {
 
       </div>
 
-      {/* GLASS NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-3xl bg-black/20 border-b border-[#7fa16d]/20">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-3xl bg-black/20 border-b border-[#6f8f5f]/20">
 
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
@@ -137,7 +137,7 @@ export default function WeddingPage() {
 
           <button
             onClick={toggleMusic}
-            className="bg-[#7fa16d] hover:bg-[#6f915d] text-[#142018] px-6 py-3 rounded-full font-semibold transition duration-300 shadow-[0_0_30px_rgba(127,161,109,0.4)]"
+            className="bg-[#6f8f5f] hover:bg-[#5f7f4f] text-[#0d1410] px-6 py-3 rounded-full font-semibold transition duration-300 shadow-[0_0_30px_rgba(111,143,95,0.4)]"
           >
             {musicPlaying ? "Pause Music" : "Play Music"}
           </button>
@@ -149,18 +149,18 @@ export default function WeddingPage() {
       {/* HERO */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-40 pb-24">
 
-        <p className="tracking-[0.5em] uppercase text-sm text-[#7fa16d] mb-6">
+        <p className="tracking-[0.5em] uppercase text-sm text-[#6f8f5f] mb-6">
           Wedding Celebration
         </p>
 
         <h1 className="text-6xl md:text-8xl font-serif text-[#f3e8eb] leading-tight drop-shadow-2xl">
-          Nandu <span className="text-[#7fa16d]">&</span> Auriane
+          Nandu <span className="text-[#6f8f5f]">&</span> Auriane
         </h1>
 
         {/* PHOTO */}
         <div className="relative mt-16 group">
 
-          <div className="absolute inset-0 bg-[#7fa16d]/25 blur-3xl rounded-[50px]"></div>
+          <div className="absolute inset-0 bg-[#6f8f5f]/25 blur-3xl rounded-[50px]"></div>
 
           <img
             src="/together.jpeg"
@@ -170,7 +170,7 @@ export default function WeddingPage() {
 
         </div>
 
-        <div className="w-40 h-[3px] bg-[#7fa16d] my-10 rounded-full"></div>
+        <div className="w-40 h-[3px] bg-[#6f8f5f] my-10 rounded-full"></div>
 
         <p className="max-w-3xl text-xl md:text-3xl italic text-[#f3e8eb] leading-relaxed">
           “From India to France,
@@ -198,9 +198,9 @@ export default function WeddingPage() {
         </p>
 
         {/* DATE */}
-        <div className="mt-14 bg-[#5a2434]/70 backdrop-blur-xl border border-[#7fa16d]/20 px-10 py-7 rounded-[35px] shadow-[0_0_50px_rgba(127,161,109,0.15)]">
+        <div className="mt-14 bg-[#2a0f18]/75 backdrop-blur-xl border border-[#6f8f5f]/20 px-10 py-7 rounded-[35px] shadow-[0_0_50px_rgba(111,143,95,0.15)]">
 
-          <p className="text-[#7fa16d] uppercase tracking-[4px] text-sm mb-3">
+          <p className="text-[#6f8f5f] uppercase tracking-[4px] text-sm mb-3">
             Wedding Day
           </p>
 
@@ -214,7 +214,7 @@ export default function WeddingPage() {
         <a
           href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
           target="_blank"
-          className="inline-block mt-8 bg-[#7fa16d] hover:bg-[#6f915d] text-[#142018] px-10 py-5 rounded-full transition duration-300 font-semibold shadow-[0_0_40px_rgba(127,161,109,0.35)]"
+          className="inline-block mt-8 bg-[#6f8f5f] hover:bg-[#5f7f4f] text-[#0d1410] px-10 py-5 rounded-full transition duration-300 font-semibold shadow-[0_0_40px_rgba(111,143,95,0.35)]"
         >
           Track Route To Wedding
         </a>
@@ -239,7 +239,7 @@ export default function WeddingPage() {
 
             <div
               key={index}
-              className="bg-[#5a2434]/70 backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(127,161,109,0.08)] p-8 text-center border border-[#7fa16d]/15 hover:scale-105 transition duration-500"
+              className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-3xl shadow-[0_0_40px_rgba(111,143,95,0.08)] p-8 text-center border border-[#6f8f5f]/15 hover:scale-105 transition duration-500"
             >
 
               <h3 className="text-5xl font-bold text-[#f3e8eb]">
@@ -258,84 +258,32 @@ export default function WeddingPage() {
 
       </section>
 
-      {/* LOVE STORY */}
+      {/* WEDDING MEMORIES */}
       <section className="relative z-10 py-24 px-6">
 
         <div className="max-w-5xl mx-auto text-center">
 
-          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-12">
-            Our Story
+          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-10">
+            Wedding Memories
           </h2>
 
-          <p className="text-lg md:text-2xl leading-10 text-[#d9d7cf]">
-            Love brought together two souls from different worlds.
-            <br /><br />
-            One heart from India,
-            one heart from France.
-            <br /><br />
-            Different cultures,
-            different journeys,
-            but the same feeling:
-            unconditional love.
-            <br /><br />
-            Today,
-            surrounded by the people we cherish most,
-            we celebrate not only our marriage,
-            but the beautiful life
-            we are creating together forever.
+          <p className="text-lg md:text-xl text-[#d9d7cf] max-w-3xl mx-auto leading-9 mb-14">
+            Every smile, every dance, every beautiful moment —
+            help us keep them forever by sharing your favorite memories
+            from our special day.
           </p>
 
-        </div>
+          <div className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-12 border border-[#6f8f5f]/20 shadow-[0_0_60px_rgba(111,143,95,0.08)]">
 
-      </section>
+            <input
+              type="file"
+              multiple
+              className="w-full text-white"
+            />
 
-      {/* FAMILY */}
-      <section className="relative z-10 py-24 px-6">
-
-        <div className="max-w-5xl mx-auto text-center">
-
-          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-14">
-            With Love From Our Families
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-
-            <div className="bg-[#5a2434]/70 backdrop-blur-xl rounded-[35px] p-10 shadow-[0_0_50px_rgba(127,161,109,0.08)] border border-[#7fa16d]/15">
-
-              <h3 className="text-3xl font-serif text-[#7fa16d] mb-6">
-                Clochard Family
-              </h3>
-
-              <div className="space-y-4 text-xl text-[#f3e8eb]">
-                <p>Isabelle Clochard</p>
-                <p>Olivier Clochard</p>
-                <p>Leila Clochard</p>
-                <p>Nathanael Clochard</p>
-              </div>
-
-            </div>
-
-            <div className="bg-[#5a2434]/70 backdrop-blur-xl rounded-[35px] p-10 shadow-[0_0_50px_rgba(127,161,109,0.08)] border border-[#7fa16d]/15 flex flex-col justify-center">
-
-              <h3 className="text-3xl font-serif text-[#7fa16d] mb-6">
-                A Message To Our Friends & Family
-              </h3>
-
-              <p className="text-lg md:text-xl leading-9 text-[#f3e8eb] italic">
-                “To every friend and family member
-                who stood beside us,
-                encouraged us,
-                loved us and supported our journey —
-                thank you for helping us become
-                the people we are today.
-                <br /><br />
-                Your love gave us strength,
-                your presence gave us hope,
-                and your kindness
-                will forever stay in our hearts.”
-              </p>
-
-            </div>
+            <p className="mt-6 text-[#d9d7cf] text-sm">
+              Upload your precious wedding photos here ✨
+            </p>
 
           </div>
 
@@ -346,7 +294,7 @@ export default function WeddingPage() {
       {/* RSVP */}
       <section className="relative z-10 py-24 px-6">
 
-        <div className="max-w-3xl mx-auto bg-[#5a2434]/70 backdrop-blur-xl rounded-[35px] p-12 shadow-[0_0_60px_rgba(127,161,109,0.08)] border border-[#7fa16d]/15">
+        <div className="max-w-3xl mx-auto bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-12 shadow-[0_0_60px_rgba(111,143,95,0.08)] border border-[#6f8f5f]/15">
 
           <h2 className="text-center text-5xl font-serif text-[#f3e8eb] mb-12">
             RSVP
@@ -363,7 +311,7 @@ export default function WeddingPage() {
               name="name"
               placeholder="Your Name"
               required
-              className="w-full p-5 rounded-2xl bg-[#142018]/60 border border-[#7fa16d]/15 text-white outline-none"
+              className="w-full p-5 rounded-2xl bg-[#0d1410]/60 border border-[#6f8f5f]/15 text-white outline-none"
             />
 
             <input
@@ -371,17 +319,17 @@ export default function WeddingPage() {
               name="email"
               placeholder="Your Email"
               required
-              className="w-full p-5 rounded-2xl bg-[#142018]/60 border border-[#7fa16d]/15 text-white outline-none"
+              className="w-full p-5 rounded-2xl bg-[#0d1410]/60 border border-[#6f8f5f]/15 text-white outline-none"
             />
 
             <textarea
               name="message"
               placeholder="Leave a loving message..."
               required
-              className="w-full p-5 rounded-2xl bg-[#142018]/60 border border-[#7fa16d]/15 text-white outline-none h-40"
+              className="w-full p-5 rounded-2xl bg-[#0d1410]/60 border border-[#6f8f5f]/15 text-white outline-none h-40"
             />
 
-            <button className="w-full bg-[#7fa16d] hover:bg-[#6f915d] text-[#142018] py-5 rounded-2xl text-lg font-semibold transition">
+            <button className="w-full bg-[#6f8f5f] hover:bg-[#5f7f4f] text-[#0d1410] py-5 rounded-2xl text-lg font-semibold transition">
               Send Love
             </button>
 
