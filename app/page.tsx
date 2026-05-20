@@ -316,7 +316,7 @@ export default function WeddingPage() {
             <input
               type="hidden"
               role="uploadcare-uploader"
-              data-public-key="demopublickey"
+              data-public-key="e2c5a8a8480409d5b4a1"
               data-images-only="true"
               data-multiple="true"
             />
