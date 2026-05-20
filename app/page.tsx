@@ -307,12 +307,12 @@ export default function WeddingPage() {
           </p>
 
           <div className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-12 border border-[#6f8f5f]/20 shadow-[0_0_60px_rgba(111,143,95,0.08)]">
-
-            <script
-              src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"
-              charSet="utf-8"
-            ></script>
-
+<script
+  async
+  src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"
+  charSet="utf-8"
+></script>
+          
             <input
               type="hidden"
               role="uploadcare-uploader"
