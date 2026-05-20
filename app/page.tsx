@@ -63,7 +63,7 @@ export default function WeddingPage() {
         <source src="/song.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* GLOWS */}
+      {/* BACKGROUND GLOWS */}
       <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#6f8f5f]/25 blur-[180px] rounded-full"></div>
 
       <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-[#2a0f18]/40 blur-[180px] rounded-full"></div>
@@ -232,6 +232,100 @@ export default function WeddingPage() {
             </div>
 
           ))}
+
+        </div>
+
+      </section>
+
+      {/* FAMILY */}
+      <section className="relative z-10 py-24 px-6">
+
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-14">
+            With Love From Our Families
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-10">
+
+            <div className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-10 shadow-[0_0_50px_rgba(111,143,95,0.08)] border border-[#6f8f5f]/15">
+
+              <h3 className="text-3xl font-serif text-[#6f8f5f] mb-6">
+                Clochard Family
+              </h3>
+
+              <div className="space-y-4 text-xl text-[#f3e8eb]">
+                <p>Isabelle Clochard</p>
+                <p>Olivier Clochard</p>
+                <p>Leila Clochard</p>
+                <p>Nathanael Clochard</p>
+              </div>
+
+            </div>
+
+            <div className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-10 shadow-[0_0_50px_rgba(111,143,95,0.08)] border border-[#6f8f5f]/15 flex flex-col justify-center">
+
+              <h3 className="text-3xl font-serif text-[#6f8f5f] mb-6">
+                A Message To Our Friends & Family
+              </h3>
+
+              <p className="text-lg md:text-xl leading-9 text-[#f3e8eb] italic">
+                “To every friend and family member
+                who stood beside us,
+                encouraged us,
+                loved us and supported our journey —
+                thank you for helping us become
+                the people we are today.
+                <br /><br />
+                Your love gave us strength,
+                your presence gave us hope,
+                and your kindness
+                will forever stay in our hearts.”
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* WEDDING MEMORIES */}
+      <section className="relative z-10 py-24 px-6">
+
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-10">
+            Wedding Memories
+          </h2>
+
+          <p className="text-lg md:text-xl text-[#d9d7cf] max-w-3xl mx-auto leading-9 mb-14">
+            Every smile, every dance, every beautiful moment —
+            help us keep them forever by sharing your favorite memories
+            from our special day.
+          </p>
+
+          <div className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-12 border border-[#6f8f5f]/20 shadow-[0_0_60px_rgba(111,143,95,0.08)]">
+
+            <script
+              src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"
+              charSet="utf-8"
+            ></script>
+
+            <input
+              type="hidden"
+              role="uploadcare-uploader"
+              data-public-key="demopublickey"
+              data-images-only="true"
+              data-multiple="true"
+            />
+
+            <p className="mt-6 text-[#d9d7cf] text-sm">
+              Upload your precious wedding memories here ✨
+            </p>
+
+          </div>
 
         </div>
 
