@@ -33,51 +33,51 @@ export default function WeddingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#fff9ef] text-[#6b4d57] overflow-hidden relative">
-      {/* Glow Background */}
-      <div className="absolute w-[500px] h-[500px] bg-pink-200/40 blur-[150px] rounded-full top-[-100px] left-[-100px]" />
-      <div className="absolute w-[400px] h-[400px] bg-yellow-200/40 blur-[130px] rounded-full bottom-0 right-0" />
+    <main className="min-h-screen bg-[#fffaf5] text-[#5f3b46] overflow-hidden relative">
+      {/* BACKGROUND GLOW */}
+      <div className="absolute w-[500px] h-[500px] bg-[#7a2f43]/20 blur-[150px] rounded-full top-[-100px] left-[-100px]" />
+      <div className="absolute w-[450px] h-[450px] bg-[#a8b58a]/30 blur-[140px] rounded-full bottom-0 right-0" />
 
-      {/* Floating Hearts */}
+      {/* FLOATING HEARTS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 text-pink-300 text-5xl animate-bounce">
+        <div className="absolute top-20 left-10 text-[#7a2f43] text-5xl animate-bounce">
           ♥
         </div>
 
-        <div className="absolute top-40 right-20 text-yellow-300 text-4xl animate-pulse">
+        <div className="absolute top-40 right-20 text-[#93a267] text-4xl animate-pulse">
           ♡
         </div>
 
-        <div className="absolute bottom-20 left-1/3 text-pink-400 text-5xl animate-pulse">
+        <div className="absolute bottom-20 left-1/3 text-[#8b314d] text-5xl animate-pulse">
           ♥
         </div>
 
-        <div className="absolute bottom-40 right-1/4 text-yellow-400 text-3xl animate-bounce">
+        <div className="absolute bottom-40 right-1/4 text-[#a8b58a] text-3xl animate-bounce">
           ♡
         </div>
 
-        <div className="absolute top-1/2 left-1/2 text-pink-200 text-6xl animate-ping">
+        <div className="absolute top-1/2 left-1/2 text-[#d9b7c2] text-6xl animate-ping">
           ♥
         </div>
       </div>
 
       {/* HERO */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32">
-        <p className="tracking-[0.5em] uppercase text-sm text-pink-400 mb-6">
+        <p className="tracking-[0.5em] uppercase text-sm text-[#7a2f43] mb-6">
           Wedding Celebration
         </p>
 
-        <h1 className="text-6xl md:text-8xl font-serif text-[#d97795] leading-tight drop-shadow-xl">
-          Nandu <span className="text-yellow-400">&</span> Auriane
+        <h1 className="text-6xl md:text-8xl font-serif text-[#7a2f43] leading-tight drop-shadow-xl">
+          Nandu <span className="text-[#93a267]">&</span> Auriane
         </h1>
 
-        <div className="w-40 h-[3px] bg-yellow-300 my-8 rounded-full"></div>
+        <div className="w-40 h-[3px] bg-[#93a267] my-8 rounded-full"></div>
 
-        <p className="max-w-3xl text-xl md:text-3xl leading-relaxed text-[#8c5c6c] italic">
+        <p className="max-w-3xl text-xl md:text-3xl leading-relaxed text-[#7a2f43] italic">
           “From India to France, from two hearts to one forever.”
         </p>
 
-        <p className="max-w-4xl mt-10 text-lg md:text-xl leading-10 text-[#7d5b65]">
+        <p className="max-w-4xl mt-10 text-lg md:text-xl leading-10 text-[#6b4b56]">
           With immense love and gratitude, we are so happy to celebrate the
           beginning of our forever together.
           <br />
@@ -89,8 +89,8 @@ export default function WeddingPage() {
           hand in hand, with love, trust, and endless happiness.
         </p>
 
-        <div className="mt-12 bg-white/70 backdrop-blur-xl shadow-2xl rounded-full px-10 py-5 border border-pink-200">
-          <p className="text-lg md:text-xl font-medium text-[#7d5b65]">
+        <div className="mt-12 bg-white/70 backdrop-blur-xl shadow-2xl rounded-full px-10 py-5 border border-[#e6d7d7]">
+          <p className="text-lg md:text-xl font-medium text-[#6b4b56]">
             01 August 2026 • La Bruffière, France
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function WeddingPage() {
 
       {/* COUNTDOWN */}
       <section className="relative z-10 px-6 py-20">
-        <h2 className="text-center text-5xl font-serif text-[#d97795] mb-16">
+        <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-16">
           Countdown To Forever
         </h2>
 
@@ -111,26 +111,26 @@ export default function WeddingPage() {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 text-center border border-pink-100 hover:scale-105 transition duration-300"
+              className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 text-center border border-[#f1e7e7] hover:scale-105 transition duration-300"
             >
-              <h3 className="text-5xl font-bold text-pink-400">
+              <h3 className="text-5xl font-bold text-[#7a2f43]">
                 {item.value}
               </h3>
 
-              <p className="mt-3 text-lg text-[#7d5b65]">{item.label}</p>
+              <p className="mt-3 text-lg text-[#6b4b56]">{item.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* STORY */}
-      <section className="relative z-10 py-28 px-6 bg-[#fff4f6]">
+      <section className="relative z-10 py-28 px-6 bg-[#fff5f6]">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl font-serif text-[#d97795] mb-12">
+          <h2 className="text-5xl font-serif text-[#7a2f43] mb-12">
             Our Story
           </h2>
 
-          <p className="text-lg md:text-2xl leading-10 text-[#7d5b65]">
+          <p className="text-lg md:text-2xl leading-10 text-[#6b4b56]">
             Love brought together two souls from different worlds.
             <br />
             One heart from India, one heart from France.
@@ -150,32 +150,32 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* QUOTES */}
-      <section className="relative z-10 py-28 px-6">
-        <h2 className="text-center text-5xl font-serif text-[#d97795] mb-16">
-          Words From The Heart
-        </h2>
+      {/* LOCATION */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl rounded-[40px] shadow-2xl p-12 border border-[#f1e7e7] text-center">
+          <h2 className="text-5xl font-serif text-[#7a2f43] mb-10">
+            Wedding Venue
+          </h2>
 
-        <div className="max-w-5xl mx-auto space-y-10">
-          {[
-            "Love knows no gender, no borders, no distance — only hearts that choose each other.",
-            "Home is no longer a place. It is each other.",
-            "In every lifetime, I would still find you.",
-            "Two brides, one love story, forever together.",
-          ].map((quote, index) => (
-            <div
-              key={index}
-              className="bg-white/70 rounded-3xl p-10 shadow-2xl border border-pink-100 text-center italic text-xl text-[#7d5b65]"
-            >
-              “{quote}”
-            </div>
-          ))}
+          <p className="text-xl leading-9 text-[#6b4b56]">
+            La Bruffière, France
+            <br />
+            47°02'23.1"N 1°13'15.5"W
+          </p>
+
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
+            target="_blank"
+            className="inline-block mt-10 bg-[#93a267] hover:bg-[#7f9156] text-white px-8 py-4 rounded-full transition duration-300 font-semibold shadow-lg"
+          >
+            Track Route To Wedding
+          </a>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="relative z-10 py-20 text-center bg-[#ffdfe8] text-[#7d5b65]">
-        <h2 className="text-5xl font-serif mb-6 text-[#d97795]">
+      <footer className="relative z-10 py-20 text-center bg-[#7a2f43] text-white">
+        <h2 className="text-5xl font-serif mb-6">
           Forever Begins Here
         </h2>
 
