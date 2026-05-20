@@ -34,12 +34,14 @@ export default function WeddingPage() {
 
   return (
     <main className="min-h-screen bg-[#fffaf5] text-[#5f3b46] overflow-hidden relative">
+
       {/* BACKGROUND GLOW */}
       <div className="absolute w-[500px] h-[500px] bg-[#7a2f43]/20 blur-[150px] rounded-full top-[-100px] left-[-100px]" />
       <div className="absolute w-[450px] h-[450px] bg-[#a8b58a]/30 blur-[140px] rounded-full bottom-0 right-0" />
 
       {/* FLOATING HEARTS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
         <div className="absolute top-20 left-10 text-[#7a2f43] text-5xl animate-bounce">
           ♥
         </div>
@@ -63,6 +65,7 @@ export default function WeddingPage() {
 
       {/* HERO */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32">
+
         <p className="tracking-[0.5em] uppercase text-sm text-[#7a2f43] mb-6">
           Wedding Celebration
         </p>
@@ -94,30 +97,46 @@ export default function WeddingPage() {
             01 August 2026 • La Bruffière, France
           </p>
         </div>
+
+        {/* MAP BUTTON */}
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
+          target="_blank"
+          className="inline-block mt-8 bg-[#93a267] hover:bg-[#7f9156] text-white px-8 py-4 rounded-full transition duration-300 font-semibold shadow-lg"
+        >
+          Track Route To Wedding
+        </a>
       </section>
 
       {/* COUNTDOWN */}
       <section className="relative z-10 px-6 py-20">
+
         <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-16">
           Countdown To Forever
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+
           {[
             { label: "Days", value: timeLeft.days },
             { label: "Hours", value: timeLeft.hours },
             { label: "Minutes", value: timeLeft.minutes },
             { label: "Seconds", value: timeLeft.seconds },
           ].map((item, index) => (
+
             <div
               key={index}
               className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 text-center border border-[#f1e7e7] hover:scale-105 transition duration-300"
             >
+
               <h3 className="text-5xl font-bold text-[#7a2f43]">
                 {item.value}
               </h3>
 
-              <p className="mt-3 text-lg text-[#6b4b56]">{item.label}</p>
+              <p className="mt-3 text-lg text-[#6b4b56]">
+                {item.label}
+              </p>
+
             </div>
           ))}
         </div>
@@ -125,7 +144,9 @@ export default function WeddingPage() {
 
       {/* STORY */}
       <section className="relative z-10 py-28 px-6 bg-[#fff5f6]">
+
         <div className="max-w-5xl mx-auto text-center">
+
           <h2 className="text-5xl font-serif text-[#7a2f43] mb-12">
             Our Story
           </h2>
@@ -147,34 +168,84 @@ export default function WeddingPage() {
             not only our marriage, but the beautiful life we are creating
             together forever.
           </p>
+
         </div>
       </section>
 
-      {/* LOCATION */}
-      <section className="relative z-10 py-24 px-6">
-        <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl rounded-[40px] shadow-2xl p-12 border border-[#f1e7e7] text-center">
-          <h2 className="text-5xl font-serif text-[#7a2f43] mb-10">
-            Wedding Venue
+      {/* FAMILY */}
+      <section className="relative z-10 py-24 px-6 bg-[#fdf7f3]">
+
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-5xl font-serif text-[#7a2f43] mb-14">
+            With Love From Our Families
           </h2>
 
-          <p className="text-xl leading-9 text-[#6b4b56]">
-            La Bruffière, France
-            <br />
-            47°02'23.1"N 1°13'15.5"W
-          </p>
+          <div className="grid md:grid-cols-2 gap-10">
 
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
-            target="_blank"
-            className="inline-block mt-10 bg-[#93a267] hover:bg-[#7f9156] text-white px-8 py-4 rounded-full transition duration-300 font-semibold shadow-lg"
-          >
-            Track Route To Wedding
-          </a>
+            <div className="bg-white/70 backdrop-blur-xl rounded-[35px] p-10 shadow-2xl border border-[#f1e7e7]">
+
+              <h3 className="text-3xl font-serif text-[#93a267] mb-6">
+                Clochard Family
+              </h3>
+
+              <div className="space-y-4 text-xl text-[#6b4b56]">
+                <p>Isabelle Clochard</p>
+                <p>Olivier Clochard</p>
+                <p>Leila Clochard</p>
+                <p>Nathanael Clochard</p>
+              </div>
+
+            </div>
+
+            <div className="bg-white/70 backdrop-blur-xl rounded-[35px] p-10 shadow-2xl border border-[#f1e7e7] flex flex-col justify-center">
+
+              <h3 className="text-3xl font-serif text-[#93a267] mb-6">
+                A New Beginning
+              </h3>
+
+              <p className="text-lg md:text-xl leading-9 text-[#6b4b56] italic">
+                “Families are not only joined by blood,
+                but also by love, acceptance and the hearts
+                that welcome us home.”
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* QUOTES */}
+      <section className="relative z-10 py-28 px-6">
+
+        <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-16">
+          Words From The Heart
+        </h2>
+
+        <div className="max-w-5xl mx-auto space-y-10">
+
+          {[
+            "Love knows no gender, no borders, no distance — only hearts that choose each other.",
+            "Home is no longer a place. It is each other.",
+            "In every lifetime, I would still find you.",
+            "Two brides, one love story, forever together.",
+          ].map((quote, index) => (
+
+            <div
+              key={index}
+              className="bg-white/70 rounded-3xl p-10 shadow-2xl border border-[#f1e7e7] text-center italic text-xl text-[#6b4b56]"
+            >
+              “{quote}”
+            </div>
+
+          ))}
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="relative z-10 py-20 text-center bg-[#7a2f43] text-white">
+
         <h2 className="text-5xl font-serif mb-6">
           Forever Begins Here
         </h2>
@@ -186,6 +257,7 @@ export default function WeddingPage() {
         <p className="mt-8 text-sm opacity-70">
           Nandu & Auriane • 2026
         </p>
+
       </footer>
     </main>
   );
