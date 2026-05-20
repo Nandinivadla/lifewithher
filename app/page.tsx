@@ -82,11 +82,12 @@ export default function WeddingPage() {
         src="https://www.bensound.com/bensound-music/bensound-love.mp3"
       />
 
-      {/* GLOW */}
+      {/* BACKGROUND GLOW */}
       <div className="absolute w-[500px] h-[500px] bg-[#7a2f43]/20 blur-[150px] rounded-full top-[-100px] left-[-100px]" />
+
       <div className="absolute w-[450px] h-[450px] bg-[#a8b58a]/30 blur-[140px] rounded-full bottom-0 right-0" />
 
-      {/* FALLING FLOWERS + HEARTS */}
+      {/* FLOATING FLOWERS + HEARTS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
         {[...Array(20)].map((_, i) => (
@@ -102,6 +103,7 @@ export default function WeddingPage() {
             {i % 2 === 0 ? "🌸" : "♥"}
           </div>
         ))}
+
       </div>
 
       {/* MUSIC BUTTON */}
@@ -147,6 +149,7 @@ export default function WeddingPage() {
           </p>
         </div>
 
+        {/* MAP BUTTON */}
         <a
           href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
           target="_blank"
@@ -154,6 +157,7 @@ export default function WeddingPage() {
         >
           Track Route To Wedding
         </a>
+
       </section>
 
       {/* COUNTDOWN */}
@@ -176,6 +180,7 @@ export default function WeddingPage() {
               key={index}
               className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 text-center border border-[#f1e7e7] hover:scale-105 transition duration-300"
             >
+
               <h3 className="text-5xl font-bold text-[#7a2f43]">
                 {item.value}
               </h3>
@@ -189,32 +194,33 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section className="relative z-10 py-24 px-6 bg-[#fff5f6]">
+      {/* STORY */}
+      <section className="relative z-10 py-28 px-6 bg-[#fff5f6]">
 
-        <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-16">
-          Our Memories
-        </h2>
+        <div className="max-w-5xl mx-auto text-center">
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <h2 className="text-5xl font-serif text-[#7a2f43] mb-12">
+            Our Story
+          </h2>
 
-          {[
-            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
-            "https://images.unsplash.com/photo-1511285560929-80b456fea0bc",
-            "https://images.unsplash.com/photo-1519741497674-611481863552",
-          ].map((img, index) => (
+          <p className="text-lg md:text-2xl leading-10 text-[#6b4b56]">
+            Love brought together two souls from different worlds.
+            <br />
+            One heart from India, one heart from France.
+            <br />
+            Different cultures, different journeys, but the same feeling:
+            unconditional love.
+            <br />
+            <br />
+            Through every smile, every challenge, every dream and every moment,
+            we found home in each other.
+            <br />
+            <br />
+            Today, surrounded by the people we cherish the most, we celebrate
+            not only our marriage, but the beautiful life we are creating
+            together forever.
+          </p>
 
-            <div
-              key={index}
-              className="overflow-hidden rounded-[35px] shadow-2xl hover:scale-105 transition duration-500"
-            >
-              <img
-                src={img}
-                className="w-full h-[400px] object-cover"
-              />
-            </div>
-
-          ))}
         </div>
       </section>
 
