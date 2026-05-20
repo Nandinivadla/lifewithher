@@ -63,7 +63,7 @@ export default function WeddingPage() {
         <source src="/song.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* FOREST GLOWS */}
+      {/* GLOWS */}
       <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#6f8f5f]/25 blur-[180px] rounded-full"></div>
 
       <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-[#2a0f18]/40 blur-[180px] rounded-full"></div>
@@ -82,24 +82,6 @@ export default function WeddingPage() {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               opacity: Math.random(),
-            }}
-          />
-        ))}
-      </div>
-
-      {/* DUST */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(40)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full animate-pulse"
-            style={{
-              width: `${Math.random() * 4}px`,
-              height: `${Math.random() * 4}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: 0.08,
-              filter: "blur(1px)",
             }}
           />
         ))}
@@ -163,7 +145,7 @@ export default function WeddingPage() {
           <div className="absolute inset-0 bg-[#6f8f5f]/25 blur-3xl rounded-[50px]"></div>
 
           <img
-            src="/together.jpeg"
+            src="/togetherus.jpeg"
             alt="Nandu and Auriane"
             className="relative w-[330px] md:w-[520px] rounded-[40px] border border-[#d8c8b8]/20 shadow-[0_0_100px_rgba(255,255,255,0.08)] object-cover transition duration-700 group-hover:scale-105 sepia-[28%] contrast-110 brightness-90 saturate-75"
           />
@@ -181,9 +163,6 @@ export default function WeddingPage() {
           With immense love and gratitude,
           we are so happy to celebrate
           the beginning of our forever together.
-          <br /><br />
-          I, Nandu, am deeply honored and emotional
-          to join the beautiful Clochard family.
           <br /><br />
           Through every smile,
           every challenge,
@@ -253,39 +232,6 @@ export default function WeddingPage() {
             </div>
 
           ))}
-
-        </div>
-
-      </section>
-
-      {/* WEDDING MEMORIES */}
-      <section className="relative z-10 py-24 px-6">
-
-        <div className="max-w-5xl mx-auto text-center">
-
-          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-10">
-            Wedding Memories
-          </h2>
-
-          <p className="text-lg md:text-xl text-[#d9d7cf] max-w-3xl mx-auto leading-9 mb-14">
-            Every smile, every dance, every beautiful moment —
-            help us keep them forever by sharing your favorite memories
-            from our special day.
-          </p>
-
-          <div className="bg-[#2a0f18]/75 backdrop-blur-xl rounded-[35px] p-12 border border-[#6f8f5f]/20 shadow-[0_0_60px_rgba(111,143,95,0.08)]">
-
-            <input
-              type="file"
-              multiple
-              className="w-full text-white"
-            />
-
-            <p className="mt-6 text-[#d9d7cf] text-sm">
-              Upload your precious wedding photos here ✨
-            </p>
-
-          </div>
 
         </div>
 
