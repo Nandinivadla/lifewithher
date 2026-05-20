@@ -400,3 +400,60 @@ export default function WeddingPage() {
     </main>
   );
 }
+{/* WEDDING MEMORIES */}
+<section className="relative z-10 py-28 px-6 bg-[#07130d] overflow-hidden">
+
+  <div className="absolute inset-0 pointer-events-none">
+    {[...Array(25)].map((_, i) => (
+      <div
+        key={i}
+        className="absolute text-[#5d7c5f] opacity-30 animate-pulse"
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          fontSize: `${10 + Math.random() * 25}px`,
+          animationDuration: `${2 + Math.random() * 4}s`,
+        }}
+      >
+        ♥
+      </div>
+    ))}
+  </div>
+
+  <div className="max-w-5xl mx-auto text-center relative z-10">
+
+    <h2 className="text-6xl font-serif text-[#f7ecef] mb-10">
+      Wedding Memories
+    </h2>
+
+    <p className="text-xl md:text-2xl text-[#d9d7cf] leading-10 max-w-4xl mx-auto">
+      Every smile, every dance, every beautiful moment —
+      help us keep them forever by sharing your favorite memories
+      from our special day.
+    </p>
+
+    <div className="mt-16 bg-[#2a0713]/80 border border-[#35543a] rounded-[45px] p-14 backdrop-blur-xl shadow-[0_0_80px_rgba(0,0,0,0.5)]">
+
+      <script
+        async
+        src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"
+        charSet="utf-8"
+      ></script>
+
+      <input
+        type="hidden"
+        role="uploadcare-uploader"
+        data-public-key="e2c5a8a8480409d5b4a1"
+        data-images-only="true"
+        data-multiple="true"
+      />
+
+      <p className="mt-6 text-[#d9d7cf] text-lg">
+        Upload your precious wedding memories here ✨
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
