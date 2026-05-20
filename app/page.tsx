@@ -44,8 +44,33 @@ export default function WeddingPage() {
       </div>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-black/10 border-b border-white/10">
 
+  <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+    <h1 className="text-2xl font-serif text-[#f5d6df]">
+      Nandu & Auriane
+    </h1>
+
+    <div className="hidden md:flex gap-8 text-[#d9c9cd]">
+
+      <a href="#home" className="hover:text-[#b8c7a1] transition">
+        Home
+      </a>
+
+      <a href="#family" className="hover:text-[#b8c7a1] transition">
+        Family
+      </a>
+
+      <a href="#rsvp" className="hover:text-[#b8c7a1] transition">
+        RSVP
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
         <p className="uppercase tracking-[6px] text-[#b8c7a1] text-sm mb-6">
           Wedding Celebration
         </p>
@@ -73,9 +98,32 @@ export default function WeddingPage() {
           “From India to France, from two hearts to one forever.”
         </p>
 
-        <div className="mt-10 bg-white/10 backdrop-blur-xl border border-white/10 px-8 py-4 rounded-full shadow-xl">
-          01 August 2026 • France
-        </div>
+        <<div className="mt-10 bg-white/10 backdrop-blur-xl border border-white/10 px-10 py-6 rounded-[30px] shadow-2xl">
+
+  <p className="text-[#b8c7a1] uppercase tracking-[4px] text-sm mb-3">
+    Countdown To Forever
+  </p>
+
+  <div className="flex gap-6 text-center justify-center">
+
+    <div>
+      <h3 className="text-4xl font-bold text-[#f5d6df]">365</h3>
+      <p className="text-sm text-[#d9c9cd]">Days</p>
+    </div>
+
+    <div>
+      <h3 className="text-4xl font-bold text-[#f5d6df]">12</h3>
+      <p className="text-sm text-[#d9c9cd]">Hours</p>
+    </div>
+
+    <div>
+      <h3 className="text-4xl font-bold text-[#f5d6df]">45</h3>
+      <p className="text-sm text-[#d9c9cd]">Minutes</p>
+    </div>
+
+  </div>
+
+</div>
 
       </section>
 
