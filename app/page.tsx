@@ -87,7 +87,7 @@ export default function WeddingPage() {
 
       <div className="absolute w-[450px] h-[450px] bg-[#a8b58a]/30 blur-[140px] rounded-full bottom-0 right-0" />
 
-      {/* FLOWERS + HEARTS */}
+      {/* FLOATING HEARTS + FLOWERS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
         {[...Array(20)].map((_, i) => (
@@ -149,7 +149,7 @@ export default function WeddingPage() {
           </p>
         </div>
 
-        {/* ROUTE BUTTON */}
+        {/* LOCATION BUTTON */}
         <a
           href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
           target="_blank"
@@ -277,30 +277,41 @@ export default function WeddingPage() {
             RSVP
           </h2>
 
-          <div className="space-y-6">
+          <form
+            action="https://formspree.io/f/mpqnpwyd"
+            method="POST"
+            className="space-y-6"
+          >
 
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               className="w-full p-5 rounded-2xl border border-[#e6d7d7] outline-none"
+              required
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
               className="w-full p-5 rounded-2xl border border-[#e6d7d7] outline-none"
+              required
             />
 
             <textarea
-              placeholder="Leave a message for the brides..."
+              name="message"
+              placeholder="Leave a loving message for the brides..."
               className="w-full p-5 rounded-2xl border border-[#e6d7d7] outline-none h-40"
+              required
             />
 
             <button className="w-full bg-[#7a2f43] hover:bg-[#5d2332] text-white py-5 rounded-2xl text-lg font-semibold transition">
               Send Love
             </button>
 
-          </div>
+          </form>
+
         </div>
       </section>
 
