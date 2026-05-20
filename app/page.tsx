@@ -12,6 +12,9 @@ export default function WeddingPage() {
     seconds: 0,
   });
 
+  const [showIntro, setShowIntro] = useState(true);
+  const [musicPlaying, setMusicPlaying] = useState(false);
+
   useEffect(() => {
     document.title = "Nandu & Auriane";
 
@@ -29,39 +32,85 @@ export default function WeddingPage() {
       });
     }, 1000);
 
-    return () => clearInterval(timer);
+    const introTimer = setTimeout(() => {
+      setShowIntro(false);
+    }, 4000);
+
+    return () => {
+      clearInterval(timer);
+      clearTimeout(introTimer);
+    };
   }, []);
+
+  const toggleMusic = () => {
+    const audio = document.getElementById(
+      "bgmusic"
+    ) as HTMLAudioElement;
+
+    if (musicPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+
+    setMusicPlaying(!musicPlaying);
+  };
+
+  if (showIntro) {
+    return (
+      <main className="h-screen bg-[#fffaf5] flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="animate-pulse">
+          <h1 className="text-6xl md:text-8xl font-serif text-[#7a2f43] mb-8">
+            Nandu ♥ Auriane
+          </h1>
+
+          <p className="text-2xl text-[#93a267] italic">
+            Forever Begins Here
+          </p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-[#fffaf5] text-[#5f3b46] overflow-hidden relative">
 
-      {/* BACKGROUND GLOW */}
+      {/* MUSIC */}
+      <audio
+        id="bgmusic"
+        loop
+        src="https://www.bensound.com/bensound-music/bensound-love.mp3"
+      />
+
+      {/* GLOW */}
       <div className="absolute w-[500px] h-[500px] bg-[#7a2f43]/20 blur-[150px] rounded-full top-[-100px] left-[-100px]" />
       <div className="absolute w-[450px] h-[450px] bg-[#a8b58a]/30 blur-[140px] rounded-full bottom-0 right-0" />
 
-      {/* FLOATING HEARTS */}
+      {/* FALLING FLOWERS + HEARTS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-        <div className="absolute top-20 left-10 text-[#7a2f43] text-5xl animate-bounce">
-          ♥
-        </div>
-
-        <div className="absolute top-40 right-20 text-[#93a267] text-4xl animate-pulse">
-          ♡
-        </div>
-
-        <div className="absolute bottom-20 left-1/3 text-[#8b314d] text-5xl animate-pulse">
-          ♥
-        </div>
-
-        <div className="absolute bottom-40 right-1/4 text-[#a8b58a] text-3xl animate-bounce">
-          ♡
-        </div>
-
-        <div className="absolute top-1/2 left-1/2 text-[#d9b7c2] text-6xl animate-ping">
-          ♥
-        </div>
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-bounce text-3xl opacity-70"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${3 + Math.random() * 5}s`,
+            }}
+          >
+            {i % 2 === 0 ? "🌸" : "♥"}
+          </div>
+        ))}
       </div>
+
+      {/* MUSIC BUTTON */}
+      <button
+        onClick={toggleMusic}
+        className="fixed top-6 right-6 z-50 bg-[#7a2f43] text-white px-6 py-3 rounded-full shadow-xl hover:scale-105 transition"
+      >
+        {musicPlaying ? "Pause Music" : "Play Music"}
+      </button>
 
       {/* HERO */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32">
@@ -98,7 +147,6 @@ export default function WeddingPage() {
           </p>
         </div>
 
-        {/* MAP BUTTON */}
         <a
           href="https://www.google.com/maps/dir/?api=1&destination=47.039755,-1.220984"
           target="_blank"
@@ -128,7 +176,6 @@ export default function WeddingPage() {
               key={index}
               className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 text-center border border-[#f1e7e7] hover:scale-105 transition duration-300"
             >
-
               <h3 className="text-5xl font-bold text-[#7a2f43]">
                 {item.value}
               </h3>
@@ -142,38 +189,37 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* STORY */}
-      <section className="relative z-10 py-28 px-6 bg-[#fff5f6]">
+      {/* GALLERY */}
+      <section className="relative z-10 py-24 px-6 bg-[#fff5f6]">
 
-        <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-16">
+          Our Memories
+        </h2>
 
-          <h2 className="text-5xl font-serif text-[#7a2f43] mb-12">
-            Our Story
-          </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-          <p className="text-lg md:text-2xl leading-10 text-[#6b4b56]">
-            Love brought together two souls from different worlds.
-            <br />
-            One heart from India, one heart from France.
-            <br />
-            Different cultures, different journeys, but the same feeling:
-            unconditional love.
-            <br />
-            <br />
-            Through every smile, every challenge, every dream and every moment,
-            we found home in each other.
-            <br />
-            <br />
-            Today, surrounded by the people we cherish the most, we celebrate
-            not only our marriage, but the beautiful life we are creating
-            together forever.
-          </p>
+          {[
+            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+            "https://images.unsplash.com/photo-1511285560929-80b456fea0bc",
+            "https://images.unsplash.com/photo-1519741497674-611481863552",
+          ].map((img, index) => (
 
+            <div
+              key={index}
+              className="overflow-hidden rounded-[35px] shadow-2xl hover:scale-105 transition duration-500"
+            >
+              <img
+                src={img}
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+
+          ))}
         </div>
       </section>
 
       {/* FAMILY */}
-      <section className="relative z-10 py-24 px-6 bg-[#fdf7f3]">
+      <section className="relative z-10 py-24 px-6">
 
         <div className="max-w-5xl mx-auto text-center">
 
@@ -216,30 +262,39 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* QUOTES */}
-      <section className="relative z-10 py-28 px-6">
+      {/* RSVP */}
+      <section className="relative z-10 py-24 px-6 bg-[#fff5f6]">
 
-        <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-16">
-          Words From The Heart
-        </h2>
+        <div className="max-w-3xl mx-auto bg-white/70 backdrop-blur-xl rounded-[35px] p-12 shadow-2xl border border-[#f1e7e7]">
 
-        <div className="max-w-5xl mx-auto space-y-10">
+          <h2 className="text-center text-5xl font-serif text-[#7a2f43] mb-12">
+            RSVP
+          </h2>
 
-          {[
-            "Love knows no gender, no borders, no distance — only hearts that choose each other.",
-            "Home is no longer a place. It is each other.",
-            "In every lifetime, I would still find you.",
-            "Two brides, one love story, forever together.",
-          ].map((quote, index) => (
+          <div className="space-y-6">
 
-            <div
-              key={index}
-              className="bg-white/70 rounded-3xl p-10 shadow-2xl border border-[#f1e7e7] text-center italic text-xl text-[#6b4b56]"
-            >
-              “{quote}”
-            </div>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-5 rounded-2xl border border-[#e6d7d7] outline-none"
+            />
 
-          ))}
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-5 rounded-2xl border border-[#e6d7d7] outline-none"
+            />
+
+            <textarea
+              placeholder="Leave a message for the brides..."
+              className="w-full p-5 rounded-2xl border border-[#e6d7d7] outline-none h-40"
+            />
+
+            <button className="w-full bg-[#7a2f43] hover:bg-[#5d2332] text-white py-5 rounded-2xl text-lg font-semibold transition">
+              Send Love
+            </button>
+
+          </div>
         </div>
       </section>
 
