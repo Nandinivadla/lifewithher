@@ -55,6 +55,9 @@ export default function WeddingPage() {
   return (
     <main className="min-h-screen bg-[#1a241c] text-white overflow-hidden relative">
 
+      {/* FILM GRAIN */}
+      <div className="fixed inset-0 opacity-[0.04] pointer-events-none z-50 mix-blend-soft-light bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]"></div>
+
       {/* MUSIC */}
       <audio id="bgmusic" loop>
         <source src="/song.mp3" type="audio/mpeg" />
@@ -82,6 +85,24 @@ export default function WeddingPage() {
         ))}
       </div>
 
+      {/* DUST PARTICLES */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-white rounded-full animate-pulse"
+            style={{
+              width: `${Math.random() * 4}px`,
+              height: `${Math.random() * 4}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              opacity: 0.08,
+              filter: "blur(1px)",
+            }}
+          />
+        ))}
+      </div>
+
       {/* FLOATING HEARTS */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
 
@@ -103,7 +124,7 @@ export default function WeddingPage() {
 
       </div>
 
-      {/* GLASS NAVBAR */}
+      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-black/20 border-b border-white/10">
 
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -142,7 +163,7 @@ export default function WeddingPage() {
           <img
             src="/together.jpeg"
             alt="Nandu and Auriane"
-            className="relative w-[330px] md:w-[500px] rounded-[40px] border border-white/10 shadow-[0_0_80px_rgba(255,255,255,0.08)] object-cover transition duration-700 group-hover:scale-105"
+            className="relative w-[330px] md:w-[500px] rounded-[40px] border border-[#d8c8b8]/20 shadow-[0_0_80px_rgba(255,255,255,0.08)] object-cover transition duration-700 group-hover:scale-105 sepia-[25%] contrast-110 brightness-90 saturate-75"
           />
 
         </div>
@@ -230,37 +251,6 @@ export default function WeddingPage() {
             </div>
 
           ))}
-
-        </div>
-
-      </section>
-
-      {/* LOVE STORY */}
-      <section className="relative z-10 py-24 px-6">
-
-        <div className="max-w-5xl mx-auto text-center">
-
-          <h2 className="text-5xl font-serif text-[#f3e8eb] mb-12">
-            Our Story
-          </h2>
-
-          <p className="text-lg md:text-2xl leading-10 text-[#d9d7cf]">
-            Love brought together two souls from different worlds.
-            <br /><br />
-            One heart from India,
-            one heart from France.
-            <br /><br />
-            Different cultures,
-            different journeys,
-            but the same feeling:
-            unconditional love.
-            <br /><br />
-            Today,
-            surrounded by the people we cherish most,
-            we celebrate not only our marriage,
-            but the beautiful life
-            we are creating together forever.
-          </p>
 
         </div>
 
