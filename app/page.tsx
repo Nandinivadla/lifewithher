@@ -257,8 +257,9 @@ export default function WeddingPage() {
               <div className="space-y-4 text-xl text-[#f3e8eb]">
                 <p>Isabelle Clochard</p>
                 <p>Olivier Clochard</p>
-                <p>Leila Clochard</p>
-                <p>Nathanael Clochard</p>
+                <p>Nathanaël Clochard</p>
+                <p>Leïla Clochard</p>
+                
               </div>
 
             </div>
